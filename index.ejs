@@ -1,0 +1,29 @@
+<%- include('../head.ejs') %>
+<div class="inner">
+	<div class="intro">
+		<h1>
+			<div class="icon">✨</div> Core App
+		</h1>
+		<h5>Your core app description.</h5>
+	</div>
+	<div class="group">
+		<% if (cron.req.session && cron.req.session.account) { %>
+		<form class="subgroup newX">
+			<button class="button" type="submit">Post X</button>
+		</form>
+		<% } else { %>
+		<a href="/login" class="button">Login to X</a>
+		<% } %>
+		<h6>
+			<div class="refresh">
+				<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+					<path d="M18.5949 5.16663C16.8618 3.32009 14.3989 2.16663 11.6666 2.16663C6.41992 2.16663 2.16663 6.41992 2.16663 11.6666C2.16663 16.9133 6.41992 21.1666 11.6666 21.1666C14.3989 21.1666 16.8618 20.0132 18.5949 18.1666M17.3236 7.98035L20.9804 7.98035L20.9804 4.3235" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+				</svg> Last Updated X
+			</div>
+		</h6>
+		<div class="Xs">
+			<div class="X"></div>
+		</div>
+	</div>
+</div>
+<%- include('../foot.ejs') %>
